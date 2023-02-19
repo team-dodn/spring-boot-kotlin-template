@@ -11,7 +11,7 @@ plugins {
     id("org.jmailen.kotlinter") apply false
 }
 
-java.sourceCompatibility = JavaVersion.VERSION_17
+java.sourceCompatibility = JavaVersion.valueOf("VERSION_${property("javaVersion")}")
 
 allprojects {
     group = "${property("projectGroup")}"
@@ -56,10 +56,11 @@ subprojects {
         enabled = true
     }
 
+    java.sourceCompatibility = JavaVersion.valueOf("VERSION_${property("javaVersion")}")
     tasks.withType<KotlinCompile> {
         kotlinOptions {
             freeCompilerArgs = listOf("-Xjsr305=strict")
-            jvmTarget = "17"
+            jvmTarget = "${project.property("javaVersion")}"
         }
     }
 
