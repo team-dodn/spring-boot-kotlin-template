@@ -4,7 +4,7 @@ import io.dodn.springboot.storage.db.CoreDbContextTest
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
 
-class ExampleRepositoryDT(
+class ExampleRepositoryIT(
     val exampleRepository: ExampleRepository
 ) : CoreDbContextTest() {
     @Test
