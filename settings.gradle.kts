@@ -7,7 +7,6 @@ include(
     "tests:api-docs",
     "support:logging",
     "support:monitoring",
-    "support:cloud-config",
     "clients:client-example"
 )
 
