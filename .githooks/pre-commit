@@ -1,4 +1,4 @@
 #!/bin/bash
 
 GIT_DIR=$(git rev-parse --show-toplevel)
-$GIT_DIR/.githooks/scripts/lint_check_kotlin.sh
+$GIT_DIR/gradlew ktlintCheck
