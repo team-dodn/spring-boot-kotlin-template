@@ -6,7 +6,7 @@ import io.dodn.springboot.core.api.support.error.ErrorType
 data class ApiResponse<T> private constructor(
     val result: ResultType,
     val data: T? = null,
-    val error: ErrorMessage? = null
+    val error: ErrorMessage? = null,
 ) {
     companion object {
         fun success(): ApiResponse<Any> {

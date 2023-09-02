@@ -6,7 +6,7 @@ import org.assertj.core.api.Assertions
 import org.junit.jupiter.api.Test
 
 class ExampleClientTest(
-    val exampleClient: ExampleClient
+    val exampleClient: ExampleClient,
 ) : ClientExampleContextTest() {
     @Test
     fun shouldBeThrownExceptionWhenExample() {

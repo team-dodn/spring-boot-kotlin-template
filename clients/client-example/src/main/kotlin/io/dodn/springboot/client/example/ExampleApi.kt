@@ -11,7 +11,7 @@ internal interface ExampleApi {
     @RequestMapping(
         method = [RequestMethod.POST],
         value = ["/example/example-api"],
-        consumes = [MediaType.APPLICATION_JSON_VALUE]
+        consumes = [MediaType.APPLICATION_JSON_VALUE],
     )
     fun example(@RequestBody request: ExampleRequestDto): ExampleResponseDto
 }

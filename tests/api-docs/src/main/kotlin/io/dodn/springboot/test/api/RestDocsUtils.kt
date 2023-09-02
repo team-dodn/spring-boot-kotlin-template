@@ -8,7 +8,7 @@ object RestDocsUtils {
     fun requestPreprocessor(): OperationRequestPreprocessor {
         return Preprocessors.preprocessRequest(
             Preprocessors.modifyUris().scheme("http").host("dev.dodn.io").removePort(),
-            Preprocessors.prettyPrint()
+            Preprocessors.prettyPrint(),
         )
     }
 

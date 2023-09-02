@@ -5,7 +5,7 @@ import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
 
 class ExampleRepositoryIT(
-    val exampleRepository: ExampleRepository
+    val exampleRepository: ExampleRepository,
 ) : CoreDbContextTest() {
     @Test
     fun testShouldBeSavedAndFound() {

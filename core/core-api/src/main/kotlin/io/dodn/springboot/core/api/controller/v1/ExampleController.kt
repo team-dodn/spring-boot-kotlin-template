@@ -14,12 +14,12 @@ import org.springframework.web.bind.annotation.RestController
 
 @RestController
 class ExampleController(
-    val exampleExampleService: ExampleService
+    val exampleExampleService: ExampleService,
 ) {
     @GetMapping("/get/{exampleValue}")
     fun exampleGet(
         @PathVariable exampleValue: String,
-        @RequestParam exampleParam: String
+        @RequestParam exampleParam: String,
     ): ApiResponse<ExampleResponseDto> {
         val result = exampleExampleService.processExample(ExampleData(exampleValue, exampleParam))
         return ApiResponse.success(ExampleResponseDto(result.data))
@@ -27,7 +27,7 @@ class ExampleController(
 
     @PostMapping("/post")
     fun examplePost(
-        @RequestBody request: ExampleRequestDto
+        @RequestBody request: ExampleRequestDto,
     ): ApiResponse<ExampleResponseDto> {
         val result = exampleExampleService.processExample(request.toExampleData())
         return ApiResponse.success(ExampleResponseDto(result.data))
