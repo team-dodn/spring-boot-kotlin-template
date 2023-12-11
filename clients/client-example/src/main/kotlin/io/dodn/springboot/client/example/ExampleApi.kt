@@ -13,7 +13,5 @@ internal interface ExampleApi {
         value = ["/example/example-api"],
         consumes = [MediaType.APPLICATION_JSON_VALUE],
     )
-    fun example(
-        @RequestBody request: ExampleRequestDto,
-    ): ExampleResponseDto
+    fun example(@RequestBody request: ExampleRequestDto): ExampleResponseDto
 }
