@@ -1,6 +1,5 @@
 package io.dodn.springboot.storage.db.core
 
-import jakarta.persistence.Column
 import jakarta.persistence.GeneratedValue
 import jakarta.persistence.GenerationType
 import jakarta.persistence.Id
@@ -13,14 +12,11 @@ import java.time.LocalDateTime
 abstract class BaseEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    val id: Long? = null
+    val id: Long = 0
 
     @CreationTimestamp
-    @Column(updatable = false)
-    val createdAt: LocalDateTime? = null
+    val createdAt: LocalDateTime = LocalDateTime.MIN
 
     @UpdateTimestamp
-    @Column
-    var updatedAt: LocalDateTime? = null
-        protected set
+    val updatedAt: LocalDateTime = LocalDateTime.MIN
 }
