@@ -1,6 +1,6 @@
-package io.dodn.springboot.core.api.support.error
+package io.dodn.springboot.core.support.error
 
-class CoreApiException(
+class CoreException(
     val errorType: ErrorType,
     val data: Any? = null,
 ) : RuntimeException(errorType.message)

@@ -1,4 +1,4 @@
-package io.dodn.springboot.core.api.support.error
+package io.dodn.springboot.core.support.error
 
 data class ErrorMessage private constructor(
     val code: String,

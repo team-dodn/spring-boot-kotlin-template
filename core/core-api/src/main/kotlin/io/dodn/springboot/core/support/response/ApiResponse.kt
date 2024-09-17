@@ -1,7 +1,7 @@
-package io.dodn.springboot.core.api.support.response
+package io.dodn.springboot.core.support.response
 
-import io.dodn.springboot.core.api.support.error.ErrorMessage
-import io.dodn.springboot.core.api.support.error.ErrorType
+import io.dodn.springboot.core.support.error.ErrorMessage
+import io.dodn.springboot.core.support.error.ErrorType
 
 data class ApiResponse<T> private constructor(
     val result: ResultType,
